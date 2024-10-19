@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div style="margin-bottom: 10px">
+        {% trans %} templates.main.form.purchase_form.title {% endtrans %}
+    </div>
+    <div style="margin-bottom: 100px">
+        {{ form_start(purchase_form) }}
+            {% for child in purchase_form %}
+                {{ form_label(child) }}
+                {{ form_widget(child) }}
+            {% endfor %}
+        {{ form_end(purchase_form) }}
+    </div>
+
+
+    <div style="margin-bottom: 10px">
+        {% trans %} templates.main.form.calculate_price_form.title {% endtrans %}
+    </div>
+    {{ form_start(calculate_price_form) }}
+        {% for child in calculate_price_form %}
+            {{ form_label(child) }}
+            {{ form_widget(child) }}
+        {% endfor %}
+    {{ form_end(calculate_price_form) }}
+
+{% endblock %}
