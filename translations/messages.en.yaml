@@ -1,0 +1,7 @@
+templates:
+    main:
+        form:
+            purchase_form:
+                title: Form for purchase endpoint
+            calculate_price_form:
+                title: Form for calculate price endpoint
