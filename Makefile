@@ -1,4 +1,4 @@
-USER_ID=$(shell id -u)
+USER_ID=1000
 
 DC = @USER_ID=$(USER_ID) docker compose
 DC_RUN = ${DC} run --rm sio_test
