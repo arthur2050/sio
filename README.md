@@ -95,11 +95,10 @@ CRUD для сущностей предполагается уже реализ�
 
 ### Для запуска проекта необходимо выполнить следующие команды:
  git clone https://github.com/arthur2050/sio.git  
- cd test_tile_expert  
- docker-compose build  
- docker-compose up -d  
- docker-compose exec sio_test php bin/console doctrine:migrations:migrate  
- docker-compose exec sio_test php bin/console doctrine:fixtures:load  
+ cd sio  
+ make init
+ bin/console doctrine:migrations:migrate  
+ bin/console doctrine:fixtures:load  
 
 Далее переходим на главный роут /main и используем две главные формы для тестирования
 эндпоинтов.
